@@ -28,8 +28,8 @@ app.head('/', (req, res) => {
 app.get('/', (req, res) => {
   console.log('GET request received - Redirecting to Yu-Gi-Oh API');
     res.header({
-    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
-    //'Content-Type': 'application/xml'
+    'Access-Control-Allow-Methods': 'GET',
+    'Content-Type': 'application/html'
   });
   res.send(html);
 
@@ -38,4 +38,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
