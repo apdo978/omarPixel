@@ -1,7 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const html = fs.readFileSync('index.html', 'utf8').toString();
 
 // Logger middleware - logs all requests
 app.use(morgan('combined'));
@@ -28,8 +30,8 @@ app.get('/', (req, res) => {
     res.header({
     'Access-Control-Allow-Methods': 'GET',
   });
-  res.send("helo")
-//   res.redirect(302, 'https://yugioh.free.beeceptor.com/');
+  res.send(html);
+
 });
 
 app.listen(PORT, () => {
