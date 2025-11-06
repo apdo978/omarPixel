@@ -28,7 +28,8 @@ app.head('/', (req, res) => {
 app.get('/', (req, res) => {
   console.log('GET request received - Redirecting to Yu-Gi-Oh API');
     res.header({
-    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+    'Content-Type': 'application/xml'
   });
   res.send(html);
 
