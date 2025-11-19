@@ -44,7 +44,7 @@ app.get('/robots.txt', (req, res) => {
 app.get('/', (req, res) => {
   res.header({
     'Content-Type': 'text/html',
-    'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Methods': 'GET',
   });
   res.redirect(301,'/elgamdeen.com');
 
