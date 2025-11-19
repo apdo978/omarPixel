@@ -16,13 +16,13 @@ app.use((req, res, next) => {
 });
 
 
-// app.head('/', (req, res) => {
-//   console.log('HEAD request received - Redirecting to Yu-Gi-Oh API');
-//   res.header({
-//     'Access-Control-Allow-Methods': 'POST',
-//   });
+app.head('/', (req, res) => {
+  console.log('HEAD request received - Redirecting to Yu-Gi-Oh API');
+  // res.header({
+  //   'Access-Control-Allow-Methods': 'POST',
+  // });
 
-// });
+});
 
 app.post('/', (req, res) => {
     res.header({
