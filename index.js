@@ -33,19 +33,20 @@ app.post('/', (req, res) => {
 });
 
 app.get('/robots.txt', (req, res) => {
-    res.header({
+  res.header({
     'Content-Type': 'text/html',
-      'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Methods': 'POST',
   });
-  res.send(html);
+  res.redirect(301,'/elgamdeen.com');
+  // res.send(html);
 
 });
 app.get('/', (req, res) => {
-    res.header({
+  res.header({
     'Content-Type': 'text/html',
-      'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Methods': 'POST',
   });
-  res.send(html);
+  res.redirect(301,'/elgamdeen.com');
 
 });
 
