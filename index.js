@@ -24,8 +24,22 @@ app.head('/', (req, res) => {
 
 });
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
+    res.header({
+    'Content-Type': 'text/html'
+  });
+  res.send(html);
 
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.header({
+    'Content-Type': 'text/html'
+  });
+  res.send(html);
+
+});
+app.get('/', (req, res) => {
     res.header({
     'Content-Type': 'text/html'
   });
