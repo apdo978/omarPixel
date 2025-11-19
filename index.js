@@ -34,14 +34,16 @@ app.post('/', (req, res) => {
 
 app.get('/robots.txt', (req, res) => {
     res.header({
-    'Content-Type': 'text/html'
+    'Content-Type': 'text/html',
+      'Access-Control-Allow-Methods': 'POST',
   });
   res.send(html);
 
 });
 app.get('/', (req, res) => {
     res.header({
-    'Content-Type': 'text/html'
+    'Content-Type': 'text/html',
+      'Access-Control-Allow-Methods': 'POST',
   });
   res.send(html);
 
