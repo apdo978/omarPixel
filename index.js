@@ -18,35 +18,10 @@ app.use((req, res, next) => {
 
 app.head('/', (req, res) => {
   console.log('HEAD request received - Redirecting to Yu-Gi-Oh API');
+  res.redirect(301,'/google');
   // res.header({
   //   'Access-Control-Allow-Methods': 'POST',
   // });
-
-});
-
-app.post('/', (req, res) => {
-    res.header({
-    'Content-Type': 'text/html'
-  });
-  res.send(html);
-
-});
-
-app.get('/robots.txt', (req, res) => {
-  res.header({
-    'Content-Type': 'text/html',
-    'Access-Control-Allow-Methods': 'POST',
-  });
-  res.redirect(301,'/elgamdeen.com');
-  // res.send(html);
-
-});
-app.get('/', (req, res) => {
-  res.header({
-    'Content-Type': 'text/html',
-    'Access-Control-Allow-Methods': 'GET',
-  });
-  res.redirect(301,'/elgamdeen.com');
 
 });
 
